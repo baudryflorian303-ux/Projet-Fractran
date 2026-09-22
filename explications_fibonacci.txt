@@ -1,0 +1,15 @@
+Explication du fonctionnement de Fibonacci dans le main.py :
+
+Nous cherchons les couples (F(n), F(n+1)) de la suite de Fibonacci.
+Pour cela : 
+
+- On exécute le programme Fibonacci à partir de n = 3 = 2**0 * 3**1
+(Pour une décomposition dans 2 et 3 on obtient le couple initial (F(0), F(1)) = (0, 1)).
+
+- On récupère avec suite() les N=1000 premiers nombres.
+
+- La liste de ces nombres contient aussi des valeurs inutiles à notre décomposition par 2 et 3
+(utilisant les facteurs premiers 5, 7, 11, 13, 17, 19 etc...) 
+
+- On cherche à récuperer uniquement les puissances de 2 et 3, on filtre alors la liste produite
+en testant : if n == Facteur([2, 3]).nombre(Facteur([2, 3]).décomposition(n))
